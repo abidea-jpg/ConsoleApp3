@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp3
+﻿namespace ConsoleApp3
 {
     internal abstract class Product
     {
+        private double price;
+
+        protected Product(string name, double price, int count)
+        {
+            Name = name;
+            this.price = price;
+            Count = count;
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
